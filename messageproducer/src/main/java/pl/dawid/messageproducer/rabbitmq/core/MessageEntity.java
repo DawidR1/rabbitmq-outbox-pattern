@@ -24,13 +24,12 @@ import lombok.Setter;
 class MessageEntity {
 
   @Id
-  @SequenceGenerator(name = "messages_s")
+  @SequenceGenerator(name = "messages_s", allocationSize = 1)
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "messages_s")
   private Long id;
 
   @Column(nullable = false)
   private String exchange;
-  @Column(nullable = false)
   private String routingKey;
   private String headers;
   @Column(nullable = false)

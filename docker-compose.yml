@@ -6,6 +6,10 @@ services:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=projectdb
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
     ports:
       - "25433:5432"
   rabbitmq:

@@ -1,10 +1,10 @@
 package pl.dawid.messageproducer.rabbitmq.example;
 
 
-import com.example.rabbitmqproject.rabbitmq.core.MessageProducer;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.dawid.messageproducer.rabbitmq.core.MessageProducer;
 
 @Service
 class ExampleService {
